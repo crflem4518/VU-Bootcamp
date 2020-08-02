@@ -2,6 +2,8 @@
 
 The files in this repository were used to configure the network depicted below.
 
+![](https://github.com/crflem4518/VU-Bootcamp/blob/master/diagrams/Cloud_Network_Diagram.png)
+
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Readme file may be used to install only certain pieces of it, such as Filebeat.
 
 * [Elk](../blob/master/ansible/Elk_yml.txt)
