@@ -2,8 +2,6 @@
 
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/crflem4518/VU-Bootcamp/tree/master/diagrams
-
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Readme file may be used to install only certain pieces of it, such as Filebeat.
 
 * [Elk](../blob/master/ansible/Elk_yml.txt)
@@ -25,7 +23,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
-TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?
+* Load balancers help distribute incoming traffic evenly across the available servers, this functionality would help in the event of a DoS attack. It also helps security by restirciting access to the servers.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system metrics.
 
@@ -77,9 +75,6 @@ The playbook implements the following tasks:
 * Download and Install the Elk container
 * Run the command to increase memory
 
-The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
-
-
 ## Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
@@ -93,8 +88,8 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 
-TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.
-
+* Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. You could configure Filebeat to capture the logs from wifi.log to monitor who is logging onto the network.
+* Metricbeat helps you monitor your servers by collecting metrics from the system and services running on the server. While using Metricbeat, you could monitor CPU usage.
 
 ## Using the Playbook
 
